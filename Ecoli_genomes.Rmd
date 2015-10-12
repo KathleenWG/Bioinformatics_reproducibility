@@ -1,0 +1,12 @@
+---
+title: "Ecoli Genome Analysis"
+author: "Kathleen Wang"
+date: "October 12, 2015"
+output: html_document
+---
+
+#Here I'm working with the data carpentry ecoli genomes data set. Found at http://tracykteal.github.io/R-genomics/02-starting-with-data.html on October 12 at 1:26 PM
+
+```{r set seed, echo = TRUE, eval=TRUE}
+set.seed(40147562)
+```
