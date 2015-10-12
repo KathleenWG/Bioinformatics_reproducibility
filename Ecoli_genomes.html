@@ -72,6 +72,32 @@ img {
 <h1>Here I’m working with the data carpentry ecoli genomes data set. Found at <a href="http://tracykteal.github.io/R-genomics/02-starting-with-data.html" class="uri">http://tracykteal.github.io/R-genomics/02-starting-with-data.html</a> on October 12 at 1:26 PM</h1>
 <pre class="r"><code>set.seed(40147562)</code></pre>
 </div>
+<div id="below-im-importing-the-ecoli-data-from-the-data-folder" class="section level1">
+<h1>Below I’m importing the <strong>ecoli data</strong> from the data folder</h1>
+<pre class="r"><code>metadata &lt;- read.csv('data/Ecoli_metadata.csv') ##reading in data file into an object named &quot;metadata&quot;&quot;
+View(metadata) ##looking at table within R
+head(metadata) ##looking at first 6 rows of dataframe</code></pre>
+<pre><code>##     sample generation   clade strain     cit       run genome_size
+## 1   REL606          0    &lt;NA&gt; REL606 unknown                  4.62
+## 2 REL1166A       2000 unknown REL606 unknown SRR098028        4.63
+## 3   ZDB409       5000 unknown REL606 unknown SRR098281        4.60
+## 4   ZDB429      10000      UC REL606 unknown SRR098282        4.59
+## 5   ZDB446      15000      UC REL606 unknown SRR098283        4.66
+## 6   ZDB458      20000 (C1,C2) REL606 unknown SRR098284        4.63</code></pre>
+<pre class="r"><code>str(metadata) ##looking structure of data</code></pre>
+<pre><code>## 'data.frame':    30 obs. of  7 variables:
+##  $ sample     : Factor w/ 30 levels &quot;CZB152&quot;,&quot;CZB154&quot;,..: 7 6 18 19 20 21 22 23 24 25 ...
+##  $ generation : int  0 2000 5000 10000 15000 20000 20000 20000 25000 25000 ...
+##  $ clade      : Factor w/ 7 levels &quot;(C1,C2)&quot;,&quot;C1&quot;,..: NA 7 7 6 6 1 1 1 2 4 ...
+##  $ strain     : Factor w/ 1 level &quot;REL606&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ cit        : Factor w/ 3 levels &quot;minus&quot;,&quot;plus&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+##  $ run        : Factor w/ 30 levels &quot;&quot;,&quot;SRR097977&quot;,..: 1 5 22 23 24 25 26 27 28 29 ...
+##  $ genome_size: num  4.62 4.63 4.6 4.59 4.66 4.63 4.62 4.61 4.65 4.59 ...</code></pre>
+<pre class="r"><code>## ?str ##help page on str
+## ??str ##all help pages with &quot;str&quot; in it
+mean(metadata$genome_size) ##calculating the mean</code></pre>
+<pre><code>## [1] 4.662667</code></pre>
+</div>
 
 
 </div>

@@ -10,3 +10,14 @@ output: html_document
 ```{r set seed, echo = TRUE, eval=TRUE}
 set.seed(40147562)
 ```
+
+#Below I'm importing the **ecoli data** from the data folder
+```{r Import Data, echo = TRUE, eval = TRUE}
+metadata <- read.csv('data/Ecoli_metadata.csv') ##reading in data file into an object named "metadata""
+View(metadata) ##looking at table within R
+head(metadata) ##looking at first 6 rows of dataframe
+str(metadata) ##looking structure of data
+## ?str ##help page on str
+## ??str ##all help pages with "str" in it
+mean(metadata$genome_size) ##calculating the mean
+```
